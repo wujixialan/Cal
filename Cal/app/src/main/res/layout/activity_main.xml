@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/activity_main"
+        tools:context="com.gzn.cal.MainActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <EditText android:layout_width="match_parent"
+                  android:layout_height="75dp"
+                  android:phoneNumber="false"
+                  android:enabled="false"
+                  android:text="0"
+                  android:id="@+id/calculator">
+        </EditText>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/show_result"
+                  android:gravity="right"
+                  android:textSize="30dip"
+                  android:text="0">
+        </TextView>
+    </LinearLayout>
+
+    <android.support.v7.widget.GridLayout android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          app:rowCount="5"
+                                          android:layout_gravity="center_horizontal"
+                                          app:columnCount="4">
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="%"
+                android:id="@+id/mod"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="^"
+                android:id="@+id/pow"></Button>
+        <Button android:layout_height="65dip" android:layout_width="80dip" android:text="/"
+                android:id="@+id/div" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal"></Button>
+
+
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="7"
+                android:id="@+id/num7"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="8"
+                android:id="@+id/num8"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="9"
+                android:id="@+id/num9"></Button>
+        <Button android:layout_height="65dip" android:layout_width="80dip" android:text="*"
+                android:id="@+id/mul"></Button>
+
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="4"
+                android:id="@+id/num4"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="5"
+                android:id="@+id/num5"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="6"
+                android:id="@+id/num6"></Button>
+        <Button android:layout_height="65dip" android:layout_width="80dip" android:text="-"
+                android:id="@+id/sub"></Button>
+
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="1"
+                android:id="@+id/num1"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="2"
+                android:id="@+id/num2"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="3"
+                android:id="@+id/num3"></Button>
+        <Button android:layout_height="65dip" android:layout_width="80dip" android:text="+"
+                app:layout_rowSpan="2" app:layout_gravity="fill" android:id="@+id/add"></Button>
+
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="0"
+                android:id="@+id/num0"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="."
+                android:id="@+id/point"></Button>
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="="
+                android:onClick="equal"></Button>
+
+
+        <Button android:layout_height="65dip" android:layout_width="100dip" android:text="AC"
+                android:id="@+id/ac" android:onClick="ac" app:layout_gravity="fill_horizontal"
+                app:layout_columnSpan="2"></Button>
+
+        <Button android:layout_height="65dip" android:layout_width="80dip" android:text="退格"
+                android:id="@+id/quit" android:onClick="quit" app:layout_gravity="fill_horizontal"
+                app:layout_columnSpan="2"></Button>
+    </android.support.v7.widget.GridLayout>
+
+</LinearLayout>
